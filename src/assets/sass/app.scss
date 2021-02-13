@@ -20,6 +20,11 @@ body {
   align-items: center;
 }
 
+.app-title {
+  color: white;
+  text-align: center;
+}
+
 .calculator {
   display: grid;
   grid-template-columns: repeat(4, 80px);

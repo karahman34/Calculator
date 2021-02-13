@@ -1,5 +1,7 @@
 <template>
   <div id="app">
+    <h1 class="app-title">Calculator</h1>
+
     <!-- The Calculator -->
     <calculator @calculated="calculatedHandler"></calculator>
 
