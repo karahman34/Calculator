@@ -1,0 +1,124 @@
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+}
+
+#app {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  min-height: 100vh;
+  width: 100%;
+  box-sizing: border-box;
+  background-color: rgb(31, 31, 61);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.calculator {
+  display: grid;
+  grid-template-columns: repeat(4, 80px);
+  grid-template-rows: minmax(120px, auto) repeat(5, 70px);
+  max-width: 430px;
+  margin-bottom: 1rem;
+
+  * {
+    font-size: 1.45rem;
+  }
+
+  .span-two {
+    grid-column: span 2;
+  }
+
+  .operator-medium-character {
+    font-size: 1.2rem;
+  }
+
+  .output {
+    grid-column: 1 / -1;
+    color: white;
+    background-color: rgb(32, 32, 32);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding: 10px 15px;
+    word-wrap: break-word;
+    word-break: break-all;
+    border: 3px solid rgb(119, 119, 119);
+    border-radius: 0.35rem;
+    margin-bottom: 0.25rem;
+
+    .previous {
+      font-size: 1.2rem;
+      color: rgba(255, 255, 255, 0.7);
+    }
+
+    .current {
+      font-size: 2rem;
+    }
+  }
+
+  & > button {
+    cursor: pointer;
+
+    &:focus {
+      outline: none;
+    }
+
+    &:hover {
+      background-color: rgb(255, 167, 2);
+      border: 1px solid rgb(122, 122, 122);
+    }
+  }
+}
+
+.history {
+  max-width: 430px;
+  border-radius: 0.25rem;
+  overflow: hidden;
+
+  * {
+    color: rgb(61, 61, 61);
+  }
+
+  .header {
+    background-color: white;
+    padding: 0.5rem 0.75rem;
+    font-size: 1.2rem;
+
+    i {
+      margin-right: 0.25rem;
+    }
+  }
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    background-color: #f3f4f6;
+    padding: 0.5rem 1rem;
+    max-height: 300px;
+    overflow-y: auto;
+
+    .calculation {
+      color: rgb(94, 94, 94);
+      font-size: 1rem;
+    }
+
+    .result {
+      text-align: right;
+      font-size: 1.25rem;
+      margin-top: 0.1rem;
+    }
+
+    .content-item:not(:last-child) {
+      margin-bottom: 0.75rem;
+    }
+  }
+}
