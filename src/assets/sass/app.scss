@@ -26,6 +26,8 @@ body {
   grid-template-rows: minmax(120px, auto) repeat(5, 70px);
   max-width: 430px;
   margin-bottom: 1rem;
+  padding: .75rem;
+  background-color: rgb(75, 75, 75);
 
   * {
     font-size: 1.45rem;
@@ -50,9 +52,8 @@ body {
     padding: 10px 15px;
     word-wrap: break-word;
     word-break: break-all;
-    border: 3px solid rgb(119, 119, 119);
-    border-radius: 0.35rem;
-    margin-bottom: 0.25rem;
+    border-radius: 0.25rem;
+    margin-bottom: 0.75rem;
 
     .previous {
       font-size: 1.2rem;
